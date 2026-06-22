@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d0d0d;
+    color:#f5e6da;
+    font-family:'Poppins',sans-serif;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(
+    135deg,
+    #2b0000,
+    #5a0f1b,
+    #1a1a1a
+    );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:700px;
+    padding:20px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    color:#e8cdb5;
+    margin-bottom:30px;
+}
+
+#enterBtn{
+    background:#e8cdb5;
+    color:#5a0f1b;
+    border:none;
+    padding:15px 40px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.4s;
+}
+
+#enterBtn:hover{
+    transform:translateY(-4px);
+}
+
+.content{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.photo-card{
+    width:80%;
+    max-width:700px;
+    margin:40px 0;
+}
+
+.photo-card img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(90,15,27,.6);
+}
+
+.quote{
+    max-width:800px;
+    text-align:center;
+    margin:40px 0;
+}
+
+.quote h2{
+    font-family:'Playfair Display',serif;
+    color:#e8cdb5;
+    font-size:2rem;
+}
+
+.letter{
+    background:#181818;
+    width:80%;
+    max-width:800px;
+    padding:40px;
+    border-radius:20px;
+    margin:40px 0;
+}
+
+.letter h2{
+    color:#e8cdb5;
+    margin-bottom:20px;
+}
+
+.letter p{
+    line-height:1.9;
+}
+
+.poetry{
+    background:#5a0f1b;
+    width:80%;
+    max-width:800px;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    margin:40px 0;
+}
+
+.poetry h2{
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+}
+
+.poetry p{
+    line-height:2;
+}
+
+.secret-btn{
+    background:#e8cdb5;
+    color:#5a0f1b;
+    border:none;
+    padding:15px 40px;
+    border-radius:50px;
+    cursor:pointer;
+    margin-top:40px;
+}
+
+.final-screen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#000;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    overflow-y:auto;
+    z-index:999;
+    padding:30px 15px;
+}
+
+.final-content{
+    width:100%;
+    max-width:700px;
+    text-align:center;
+    margin:auto;
+}
+
+.final-content h1{
+    font-size:clamp(3rem, 8vw, 5rem);
+}
+
+.final-content p{
+    line-height:2;
+    margin:20px 0;
+    font-size:clamp(0.95rem, 3vw, 1.1rem);
+}
+
+.final-content img{
+    width:100%;
+    max-width:250px;
+    height:auto;
+    border-radius:20px;
+    margin-top:20px;
+}
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .quote h2{
+        font-size:1.5rem;
+    }
+
+    .letter,
+    .poetry{
+        width:95%;
+        padding:25px;
+    }
+
+    .photo-card{
+        width:95%;
+    }
+
+}
+.middle-page{
+    display:none;
+    min-height:100vh;
+    background:#111;
+    padding:80px 20px;
+}
+
+.middle-content{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.middle-content h1{
+    font-family:'Playfair Display',serif;
+    color:#e8cdb5;
+    margin-bottom:50px;
+    font-size:3rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#5a0f1b;
+    padding:30px;
+    border-radius:20px;
+    color:#fff;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.nav-buttons{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.nav-buttons button{
+    background:#e8cdb5;
+    color:#5a0f1b;
+    border:none;
+    padding:15px 30px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.nav-buttons button:hover{
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+    .middle-content h1{
+        font-size:2rem;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+}

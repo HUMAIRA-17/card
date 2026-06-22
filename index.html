@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Audio -->
+    <audio id="bgMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Intro -->
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>For My Favorite Person</h1>
+
+            <p>
+                A little piece of my heart,
+                wrapped into a website.
+            </p>
+
+            <button id="enterBtn">
+                Enter ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Main Content -->
+    <section class="content" id="content">
+
+        <div class="photo-card">
+            <img src="pic1.jpg" alt="">
+        </div>
+
+        <div class="quote">
+            <h2>
+                Distance has taught me that love
+                is measured in effort, not kilometers.
+            </h2>
+        </div>
+
+        <div class="letter">
+
+            <h2>To You</h2>
+
+            <p>
+                Thank you for being my comfort,
+                my happiness and my safe place.
+                Thank you for choosing me every day,
+                even from miles away.
+            </p>
+
+            <p>
+                I know life is not perfect,
+                but having you in it makes everything
+                feel a little brighter.
+            </p>
+
+        </div>
+
+        <div class="photo-card">
+            <img src="pic2.jpg" alt="">
+        </div>
+
+        <div class="poetry">
+
+            <h2>A Few Words For You</h2>
+
+            <p>
+                If distance could weaken love,<br>
+                we would've lost long ago.<br><br>
+
+                But here we are,<br>
+                still choosing each other,<br>
+                every single day.
+            </p>
+
+        </div>
+
+       <button class="secret-btn" onclick="showMiddle()">
+    One More Thing...
+</button>
+
+    </section>
+ <!-- Third Page -->
+
+<div class="middle-page" id="middlePage">
+
+    <div class="middle-content">
+
+        <h1>Things I Want You To Know</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                I'm proud of you ❤️
+            </div>
+
+            <div class="card">
+                Thank you for staying by my side ❤️
+            </div>
+
+            <div class="card">
+                You make my difficult days easier ❤️
+            </div>
+
+            <div class="card">
+                I feel safe with you ❤️
+            </div>
+
+           
+
+            <div class="card">
+                You're my favorite notification ❤️
+            </div>
+
+        </div>
+
+        <div class="nav-buttons">
+
+            <button onclick="goBackToContent()">
+                ← Back
+            </button>
+
+            <button onclick="showFinal()">
+                One Last Thing →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- Final Message -->
+    <div class="final-screen" id="finalScreen">
+
+        <div class="final-content">
+
+            <h1>❤️</h1>
+
+            <p>
+                Thank you for loving me.<br>
+                Thank you for waiting for me.<br>
+                Thank you for choosing me.<br><br>
+
+                Again.<br>
+                And again.<br>
+                And again.
+            </p>
+
+            <img src="pic3.jpg" alt="">
+
+        </div>
+
+    </div>
+
+<script>
+
+const enterBtn = document.getElementById("enterBtn");
+const music = document.getElementById("bgMusic");
+
+enterBtn.addEventListener("click", () => {
+
+    music.play();
+
+    document.querySelector(".hero").style.display = "none";
+
+    document.getElementById("content").style.display = "flex";
+
+});
+
+function showMessage(){
+    document.getElementById("finalScreen").style.display = "flex";
+}
+function showMiddle(){
+
+    document.getElementById("content").style.display = "none";
+
+    document.getElementById("middlePage").style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+function goBackToContent(){
+
+    document.getElementById("middlePage").style.display = "none";
+
+    document.getElementById("content").style.display = "flex";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+function showFinal(){
+
+    document.getElementById("middlePage").style.display = "none";
+
+    document.getElementById("finalScreen").style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+function backToMiddle(){
+
+    document.getElementById("finalScreen").style.display = "none";
+
+    document.getElementById("middlePage").style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+</script>
+
+</body>
+</html>
